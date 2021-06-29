@@ -12,9 +12,12 @@ Contents
 
 Introduction
 ----
+Accurate prediction of protein contact-map is essential for accurate protein structure and function prediction. As a result, many methods have been developed for protein contact map prediction. However, most methods rely on protein-sequence-evolutionary information, which may not exist for many proteins due to lack of naturally occurring homologous sequences. Moreover, generating evolutionary profiles is computationally intensive. Here, we developed a contact-map predictor utilizing the output of a pre-trained language model ESM-1B as an input along with a large training set and an ensemble of residual neural networks.
+
 
 Results
 ----
+We showed that the proposed method makes a significant improvement over a single-sequence-based predictor SSCpred with 15% improvement in the F1-score for the independent CASP14-FM test set. It also outperforms evolutionary-profile-based methods TrRosetta and SPOT-Contact with 48.7% and 48.5% respective improvement in the F1-score on the proteins without homologs (Neff=1) in the independent SPOT-2018 set. The new method provides a much faster and reasonably accurate alternative to evolution-based methods, useful for large-scale prediction.
 
 System Requirments
 ----
@@ -71,3 +74,7 @@ To run SPOT-Contact-Single use the following command
 or 
 
 `python -W ignore spot_contact_single.py --file_list file_lists/file_list_casp14.txt --save_path results/ --device cpu --esm_device cpu` 
+
+Citation Guide
+----
+for more details on this work refer the manuscript

@@ -59,10 +59,8 @@ for CPU only
 
 Input dependency
 ----
-SPOT-Contact-Single uses the output of **SPOT-1D-Single** available at `https://github.com/jas-preet/SPOT-1D-Single`
-generate the output for the required proteins and copy to `data_files/out_spot_1d_sgl/`
-
-
+SPOT-Contact-Single uses the output of **SPOT-1D-Single**. Please generate the prediction of SPOT-1D-Single from the Stand-alone version available at `https://github.com/jas-preet/SPOT-1D-Single`.
+Copy the prediction for the required proteins to `data_files/out_spot_1d_sgl/`
 
 Execute
 ----

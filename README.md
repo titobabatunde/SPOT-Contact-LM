@@ -57,10 +57,16 @@ for CPU only
 
 10. `conda install tqdm`
 
+Input dependency
+----
+SPOT-Contact-Single uses the output of **SPOT-1D-Single** available at `https://github.com/jas-preet/SPOT-1D-Single`
+generate the output for the required proteins and copy to `data_files/out_spot_1d_sgl/`
+
+
 
 Execute
 ----
-To run SPOT-1D-Single use the following command
+To run SPOT-Contact-Single use the following command
 
 `python -W ignore spot_contact_single.py --file_list file_lists/file_list_casp14.txt --save_path results/ --device cuda:0 --esm_device cuda:0`
 

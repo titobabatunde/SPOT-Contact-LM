@@ -1,4 +1,4 @@
-SPOT-Contact-Single: *Improving Single-Sequence-Based Prediction of Protein Contact Map using a Transformer Language Model, Large Training Set and Ensembled Deep Learning.*
+SPOT-Contact-Single: *Improving Single-Sequence-Based Prediction of Protein Contact Map using a Transformer Language Model.*
 ====
 The standalone version / CLI-tool of SPOT-Contact-Single available for public use for research purposes.
 

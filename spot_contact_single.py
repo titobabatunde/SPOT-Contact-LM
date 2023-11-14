@@ -53,6 +53,7 @@ if args.device == "cpu":
                   "contact_jits/atten_only_dist_cpu.pth",
                   "contact_jits/atten_all_dist_cpu.pth"]
 else:
+    # these are the siz models used for ensemble transfer learning
     model_list = ["contact_jits/atten_single_contact_gpu.pth",
                   "contact_jits/atten_only_contact_gpu.pth",
                   "contact_jits/atten_all_contact_gpu.pth",

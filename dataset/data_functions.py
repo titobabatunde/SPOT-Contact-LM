@@ -3,7 +3,15 @@ import pandas as pd
 
 def read_list(file_name):
     '''
-    returns list of proteins from file
+    reads a text file to get the list of 
+    elements
+    Parameters
+    ----------
+    file_name : str
+        complete path to a file
+    Returns
+    -------
+    list of proteins from text file
     '''
     with open(file_name, 'r') as f:
         text = f.read().splitlines()
@@ -22,12 +30,22 @@ def read_fasta_file(fname):
 
 
 def one_hot(seq):
-    RNN_seq = seq
+    """
+    converts a sequence to one hot encoding
+    Parameters
+    ----------
+    seq : str
+        amino acid sequence
+    Returns
+    -------
+    one hot encoding of the amino acid (array) [L,20]
+    """
+    prot_seq = seq
     BASES = 'ARNDCQEGHILKMFPSTWYV'
     bases = np.array([base for base in BASES])
     feat = np.concatenate(
         [[(bases == base.upper()).astype(int)] if str(base).upper() in BASES else np.array([[-1] * len(BASES)]) for base
-         in RNN_seq])
+         in prot_seq])
     return feat
 
 
@@ -52,6 +70,8 @@ dict_rnam1_ASA = dict(zip(rnam1_std, ASA_std))
 
 
 def read_spot_single(file_name, seq):
+    # change this to read dssp, hse, and theta
+    # also add regression models? Decide whether we just want simple output
     data = pd.read_csv(file_name)
     ss3_prob = np.concatenate((data['P3C'][:, None], data['P3E'][:, None], data['P3H'][:, None]), 1).astype(np.float32)
     ss8_prob = np.concatenate((

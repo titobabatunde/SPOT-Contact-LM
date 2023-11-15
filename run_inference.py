@@ -11,7 +11,17 @@ from dataset.dataset import ProteinsDataset, protein_collate_fn
 from models.bilistm import Network
 from models.ms_resnet import Network as Network2
 from models.ms_res_lstm import Network as Network3
+from models.bilistm_reg import Network as Network4
+from models.ms_resnet_reg import Network as Network4
+from models.ms_res_lstm_reg import Network as Network6
+from models.iresnet import iResNet
+
+
 dev = 'cuda:1'
+# This will now be our spot_contact_single.py!
+# TODO: add it all together and make training, validation, and testing methods
+# TODO: ensure that data size matches?
+# TODO: check SPOT-1D-LM to see how they output predictions for training?
 
 def spot_1d_single(data_loader, model1, model2, model3, device):
     # calls mean ensemble of SPOT-1D-Single
